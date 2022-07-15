@@ -1,0 +1,142 @@
+@import "../../variables.scss";
+
+.adsContainer {
+  display: flex;
+  gap: 16px;
+  padding: 0 36px;
+
+  &__item {
+    flex: 1;
+    position: relative;
+    background-size: cover;
+    background-position: 60% 40%;
+    background-repeat: no-repeat;
+    padding: 82px 0 95px 124px;
+    border-radius: 7px;
+
+    &Header {
+      color: $colorWhite;
+      font-size: calc(100vw / 55);
+      margin: 0 0 29px 0;
+    }
+
+    &Description{
+        font-size: calc(100vw / 75);
+        color: $colorWhite;
+        width: 22vw;
+        margin: 0 0 100px;
+    }
+
+    &IconBox{
+        display: flex;
+        position: absolute;
+        top: 240px;
+        justify-content: space-between;
+        width: 13%;
+        gap: 14px;
+        margin-bottom: 24px;
+    }
+
+    &Icon{
+        width: 25px;
+        height: 25px;
+    }
+
+    &Button{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 204px;
+    height: 49px;
+    line-height: 50px;
+    background-color: $colorHighlight;
+    color: $colorWhite;
+    border: 0;
+    border-radius: 10px;
+    transition: background-color 300ms linear;
+
+    &:hover{
+      background-color: #00ffff;
+    }
+    }
+  }
+
+  &__left {
+    background-image: url("../../../public/dana-devolk-x2cNcfz_xXU-unsplash.png");
+  }
+
+  &__right {
+    background-image: url("../../../public/aplikacja.png");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    &__left {
+      background-image: url("../../../public/dana-devolk-x2cNcfz_xXU-unsplash@2x.png");
+    }
+
+    &__right {
+      background-image: url("../../../public/aplikacja@2x.png");
+    }
+  }
+}
+
+@media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+    .adsContainer{
+        flex-direction: column;
+        &__item{
+            background-position: center;
+            &Header {
+                font-size: calc(100vw / 20);
+              }
+          
+            &Description{
+                font-size: calc(100vw / 40);
+                width: 40vw;
+            }
+
+            &IconBox{
+              top: 55%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $minMobile) and (max-width: $maxMobile) {
+    .adsContainer{
+        flex-direction: column;
+
+        &__item{
+            padding: 50px 5vw 30px;
+            // background-position: bottom;
+            &Header {
+                font-size: calc(100vw / 14);
+              }
+          
+            &Description{
+                font-size: calc(100vw / 20);
+                width: 100%;
+                margin-bottom: 100px;
+                &Highlight{
+                  font-weight: 600;
+                  &Left{
+                    background-color: $colorBlack;
+                  }
+                  &Right{
+                    background-color: $colorHighlight;
+                  }
+                }
+            }
+
+            &Button{
+                margin: 0 auto;
+            }
+
+            &IconBox{
+              top: 65%;
+            }
+        }
+    }
+}

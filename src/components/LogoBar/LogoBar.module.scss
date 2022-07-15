@@ -1,0 +1,35 @@
+@import "../../variables.scss";
+
+.LogoBar {
+  display: flex;
+  // position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 170px;
+  width: 100%;
+  padding: 24px 0 21px;
+  overflow-x: hidden;
+}
+
+@media screen and (min-width: $minTablet) and (max-width: $maxTablet) {
+  .LogoBar {
+    animation: move-left-to-right linear 12s infinite;
+    width: 180vw;
+  }
+}
+
+@media screen and (min-width: $minMobile) and (max-width: $maxMobile) {
+  .LogoBar {
+    animation: move-left-to-right linear 15s infinite;
+    width: 350vw;
+  }
+}
+
+@keyframes move-left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(30%);
+  }
+}
