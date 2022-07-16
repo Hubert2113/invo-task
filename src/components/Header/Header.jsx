@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+import { useState } from "react";
 import {
   HeaderBlock,
   NavBox,
@@ -5,11 +7,26 @@ import {
   LogoImg,
   ButtonBox,
   HeaderBtn,
+  Modal,
+  ModalCloseBtn
 } from "./Header.styles";
 
+
+
 const Header = () => {
+  const [isMenuVisable, setMenuVisability] = useState(false);
   return (
     <HeaderBlock>
+      <Modal isVisible={isMenuVisable}>
+        <h3>Menu</h3>
+        <ModalCloseBtn onClick={() => setMenuVisability(!isMenuVisable)}>X</ModalCloseBtn>
+        <NavElement href="#">Steaks</NavElement>
+        <NavElement href="#">Burgers</NavElement>
+        <NavElement href="#">French fries</NavElement>
+        <NavElement href="#"> Drinks</NavElement>
+        <NavElement href="#">Gdzie dowozimy?</NavElement>
+        <NavElement href="#">Kontakt</NavElement>
+      </Modal>
       <a style={{ margin: "0 1vw" }} href="s" target="_blank">
         <picture>
           <source media="(max-width: 1279px)" srcSet="l.png" />
@@ -32,19 +49,19 @@ const Header = () => {
           </svg>
           Moje konto
         </HeaderBtn>
-        <HeaderBtn href="#" target="_blank">
+        <HeaderBtn target="_blank">
           <svg width="18px" height="16px">
             <use href="sprite.svg#koszyk"></use>
           </svg>
           Koszyk
         </HeaderBtn>
-        <HeaderBtn href="a" target="_blank">
+        <HeaderBtn target="_blank">
           <svg width="14px" height="16px">
             <use href="sprite.svg#zamow_ikona"></use>
           </svg>
           Zamów
         </HeaderBtn>
-        <HeaderBtn isMenu={true} href="a" target='_blank'>
+        <HeaderBtn onClick={() => setMenuVisability(!isMenuVisable)} isMenu={true} target='_blank'>
           <span style={{height: "19px"}} className="material-symbols-outlined">
             menu
           </span>

@@ -13,8 +13,6 @@ const Main = () => {
           clickable: true,
         }}
         modules={[Pagination]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide className={styles.swiper__slide}>
           <div>
