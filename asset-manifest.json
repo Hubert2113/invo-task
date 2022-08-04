@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f3bbc5f6.css",
+    "main.js": "/static/js/main.7caba464.js",
+    "static/media/dana-devolk-x2cNcfz_xXU-unsplash@2x.png": "/static/media/dana-devolk-x2cNcfz_xXU-unsplash@2x.53533b81b99aabc20cff.png",
+    "static/media/Bitmap@2x.png": "/static/media/Bitmap@2x.8648bbac484b2d00715a.png",
+    "static/media/dana-devolk-x2cNcfz_xXU-unsplash.png": "/static/media/dana-devolk-x2cNcfz_xXU-unsplash.63c7f3982421c00225eb.png",
+    "static/media/Bitmapv.png": "/static/media/Bitmapv.0f83460573d7dfb145ae.png",
+    "static/media/aplikacja@2x.png": "/static/media/aplikacja@2x.67a96b1ae66572876ec3.png",
+    "static/media/aplikacja.png": "/static/media/aplikacja.1f15850641f6ca1c6d37.png",
+    "index.html": "/index.html",
+    "main.f3bbc5f6.css.map": "/static/css/main.f3bbc5f6.css.map",
+    "main.7caba464.js.map": "/static/js/main.7caba464.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3bbc5f6.css",
+    "static/js/main.7caba464.js"
+  ]
+}
